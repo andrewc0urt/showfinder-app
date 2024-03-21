@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Mac specific files
+.DS_Store
+
+# Visual Studio Code settings
+.vscode/
+
+# Environment variables
+.env
+
+# Compiled output
+build/
+dist/
+
+# Log files
+*.log
+logs/
