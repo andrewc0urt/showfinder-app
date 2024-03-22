@@ -1,0 +1,18 @@
+body {
+	background-color: #dedede;
+}
+
+.main-content h1,
+.main-content h4 {
+	color: #374151;
+}
+
+.card {
+	width: 19rem;
+	border-radius: 8px;
+}
+
+.custom-card {
+	background-color: #dedede;
+	/* border: 1px solid #374151; */
+}
