@@ -14,5 +14,8 @@ body {
 
 .custom-card {
 	background-color: #dedede;
-	/* border: 1px solid #374151; */
+}
+
+.hidden {
+	display: none;
 }

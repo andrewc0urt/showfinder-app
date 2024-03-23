@@ -9,6 +9,28 @@ const searchButton = document.querySelector("#tv-search-button");
 const resultsContainer = document.querySelector(".results-container");
 console.log(resultsContainer.childNodes);
 
+// use the images container to add a click event listener to the container of dynamically created card
+document.addEventListener("click", function (event) {
+	event.preventDefault();
+	if (event.target.classList.contains("btn-primary") && event.target.closest(".images-container")) {
+		const parentCard = event.target.closest(".card-container");
+		if (parentCard) {
+			const frontCard = parentCard.querySelector(".front-card");
+			const backCard = parentCard.querySelector(".back-card");
+
+			if (frontCard.classList.contains("hidden")) {
+				// Show front card, hide back card
+				frontCard.classList.remove("hidden");
+				backCard.classList.add("hidden");
+			} else {
+				// Hide front card, show back card
+				frontCard.classList.add("hidden");
+				backCard.classList.remove("hidden");
+			}
+		}
+	}
+});
+
 // TVMaze API Url
 const tvMazeURL = "https://api.tvmaze.com/search/shows";
 
@@ -62,30 +84,23 @@ searchButton.addEventListener("click", async (e) => {
 
 // function to create a new Bootstrap card component that displays all results
 createNewCard = () => {
-	const newDiv = document.createElement("div");
-	newDiv.classList.add("card", "mb-3", "me-4");
+	// create a main container for the entire card
+	const cardDivContainer = document.createElement("div");
+	cardDivContainer.classList.add("card-container");
 
-	const newImg = document.createElement("img");
-	newImg.classList.add("card-img-top");
-	newImg.src = "#";
-	newImg.alt = "";
+	const cardDiv = document.createElement("div");
+	cardDiv.classList.add("card", "mb-3", "me-4");
 
-	const newDiv2 = document.createElement("div");
-	newDiv2.classList.add("card-body", "mx-auto");
+	// call the function to create a formatted front card
+	const newFrontCard = makeFrontCard();
 
-	const newAnchor = document.createElement("a");
-	newAnchor.href = "#";
-	newAnchor.classList.add("btn", "btn-primary");
-	newAnchor.textContent = "See More";
+	// call the function to create a formatted back card
+	const newBackCard = makeBackCard();
 
-	// create the card by appending the new elements
-	newDiv.append(newImg);
+	cardDiv.append(newFrontCard, newBackCard);
+	cardDivContainer.append(cardDiv);
 
-	newDiv2.append(newAnchor);
-
-	newDiv.append(newDiv2);
-
-	return newDiv;
+	return cardDivContainer;
 };
 
 const loadCard = (arrayOfObjects) => {
@@ -120,6 +135,96 @@ const loadCard = (arrayOfObjects) => {
 			console.log(`Failed to load image for ${each.show.name}: ${error}`);
 		}
 	}
+};
+
+// function responsible for creating the front side of the card with the elements
+const makeFrontCard = () => {
+	// create a div container for the front of the card
+	const cardFront = document.createElement("div");
+	cardFront.classList.add("front-card");
+
+	// design the front of the card with an image
+	const newImg = document.createElement("img");
+	newImg.classList.add("card-img-top");
+	newImg.src = "#";
+	newImg.alt = "";
+
+	// add a body to the front of the card
+	const frontCardBody = document.createElement("div");
+	frontCardBody.classList.add("card-body", "mx-auto");
+
+	// add a "Show More" link to the card
+	const newAnchor = document.createElement("a");
+	newAnchor.href = "#";
+	newAnchor.classList.add("btn", "btn-primary");
+	newAnchor.textContent = "Show More";
+
+	// add the show image and link to the front card's body
+	frontCardBody.append(newImg);
+	frontCardBody.append(newAnchor);
+
+	cardFront.append(frontCardBody);
+
+	return cardFront;
+};
+
+// function responsible for creating the back side of the card with detailed information
+const makeBackCard = () => {
+	// create a div container for the back of the card
+	const cardBack = document.createElement("div");
+	cardBack.classList.add("back-card", "hidden");
+	// cardBack.style.height = "302px";
+	cardBack.style.height = "449.281px";
+
+	// design the back of card with a body of information
+	const backCardBody = document.createElement("div");
+	backCardBody.classList.add("card-body", "mx-auto");
+
+	// create an h5 element to hold the show title
+	const showTitle = document.createElement("h5");
+	showTitle.innerText = "Temp Title";
+
+	// create a paragraph element to hold the show summary
+	const showSummary = document.createElement("p");
+	showSummary.innerText = "Show summary...";
+
+	// create a p element to hold the network name
+	const networkName = document.createElement("p");
+	networkName.innerText = "Name of network";
+
+	// create a p element to hold the show type
+	const showType = document.createElement("p");
+	showTitle.innerText = "Type of Show:";
+
+	// create a p element to hold the premier date
+	const premierDate = document.createElement("p");
+	premierDate.innerText = "Premier Date:";
+
+	// create a link element to hold the url to the official show site
+	const officialSite = document.createElement("a");
+	officialSite.innerText = "Link to Site:";
+
+	// add a "Show More" link to the card
+	const newAnchor = document.createElement("a");
+	newAnchor.href = "#";
+	newAnchor.classList.add("btn", "btn-primary");
+	newAnchor.textContent = "Show Less";
+
+	// append all the elements to the back of the card
+	backCardBody.append(
+		showTitle,
+		showSummary,
+		networkName,
+		showType,
+		premierDate,
+		officialSite,
+		newAnchor
+	);
+
+	// append the body of the back card to the back-card container
+	cardBack.append(backCardBody);
+
+	return cardBack;
 };
 
 const resultsHeader = () => {
