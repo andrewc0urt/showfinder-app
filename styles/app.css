@@ -19,3 +19,16 @@ body {
 .hidden {
 	display: none;
 }
+
+.back-card span {
+	font-weight: 600;
+}
+
+.more-button {
+	color: white;
+	background: #5475a7;
+}
+.more-button:hover {
+	color: white;
+	background: #003366;
+}
