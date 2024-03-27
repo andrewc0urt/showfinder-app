@@ -16,6 +16,8 @@
 		<!-- Custom CSS file -->
 		<link rel="stylesheet" href="styles/app.css" />
 
+		<link rel="stylesheet" href="styles/appMediaQueries.css" />
+
 		<!-- Axios: jsDelivr CDN -->
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	</head>
@@ -23,9 +25,9 @@
 	<body>
 		<div class="container" id="main-container">
 			<!-- Navbar containing the app logo -->
-			<nav class="navbar mb-2" id="navbar-header">
+			<nav class="navbar mb-lg-2 mb-0" id="navbar-header">
 				<div class="container d-flex justify-content-center">
-					<a class="navbar-brand" href="#">
+					<a class="navbar-brand mx-auto" href="#">
 						<img
 							id="logo"
 							src="images/showfinder-high-resolution-logo.png"
@@ -39,7 +41,7 @@
 
 			<!-- Main content area explaining what the app is and how to use it -->
 			<div class="main-content">
-				<div class="content-welcome-message mb-4">
+				<div class="content-welcome-message">
 					<h1>Welcome to ShowFinder!</h1>
 
 					<p>
@@ -49,8 +51,8 @@
 					</p>
 				</div>
 
-				<div class="content-how-to-use mb-4 border-top border-black">
-					<h4 class="mt-4">How to Use:</h4>
+				<div class="content-how-to-use mb-lg-4 mb-3 border-top border-black">
+					<h4 class="mt-lg-4 mt-md-2">How to Use:</h4>
 					<p>
 						Simply use the search field above to find any TV show you're interested in. Enter the
 						title of the show or even a keyword related to the show, and hit enter. ShowFinder will
@@ -64,12 +66,12 @@
 				</div>
 			</div>
 
-			<div class="row mb-4 mt-5">
+			<div class="row mb-4 mt-3">
 				<form class="d-flex" id="search-form" role="search">
-					<div class="col-9 me-1">
+					<div class="col-9 me-lg-1 me-0 search-field-container">
 						<input
 							id="tv-search-field"
-							class="form-control me-2"
+							class="form-control me-lg-2 me-0"
 							type="search"
 							placeholder="Looking for a TV show? Start typing..."
 							name="tvSearch"
@@ -77,8 +79,12 @@
 						/>
 					</div>
 
-					<div class="col-3">
-						<button id="tv-search-button" class="btn btn-outline-success w-50" type="submit">
+					<div class="search-button-container">
+						<button
+							id="tv-search-button"
+							class="btn btn-outline-success w-lg-50 w-100"
+							type="submit"
+						>
 							Search
 						</button>
 					</div>

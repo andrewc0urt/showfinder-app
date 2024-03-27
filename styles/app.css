@@ -2,9 +2,17 @@ body {
 	background-color: #dedede;
 }
 
+#main-container {
+	margin-bottom: 6rem;
+}
+
 .main-content h1,
 .main-content h4 {
 	color: #374151;
+}
+
+.search-button-container {
+	width: 12.5%;
 }
 
 .card {
@@ -12,7 +20,28 @@ body {
 	border-radius: 8px;
 }
 
-.custom-card {
+/* .custom-card {
 	background-color: #dedede;
-	/* border: 1px solid #374151; */
+} */
+
+.front-card {
+	border: 1px solid black;
+	background-color: #dedede;
+}
+
+.hidden {
+	display: none;
+}
+
+.back-card span {
+	font-weight: 600;
+}
+
+.more-button {
+	color: white;
+	background: #5475a7;
+}
+.more-button:hover {
+	color: white;
+	background: #003366;
 }
