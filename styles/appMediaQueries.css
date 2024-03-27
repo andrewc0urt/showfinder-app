@@ -1,0 +1,107 @@
+@media (max-width: 991.98px) {
+	/* styling for the "Welcome" content and the "How to Use" content */
+	.main-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.content-welcome-message,
+	.content-how-to-use,
+	.get-started {
+		text-align: center;
+	}
+
+	.content-how-to-use h4 {
+		margin-top: 1rem;
+	}
+
+	/* styling for the Search form */
+	#search-form {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.search-button-container {
+		margin-top: 0.8rem;
+	}
+
+	/* styling for the results area */
+	.results-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.results-header {
+		text-align: center;
+	}
+}
+
+@media (max-width: 767.98px) {
+	/* styling for the logo */
+	.navbar {
+		margin-bottom: 0;
+	}
+
+	/* styling for the "Welcome" content and the "How to Use" content */
+	.main-content {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.main-content p {
+		text-align: center;
+	}
+
+	.content-how-to-use {
+		text-align: center;
+	}
+
+	.get-started {
+		text-align: center;
+	}
+
+	/* styling for the Search form */
+	.row {
+		margin-top: 2rem;
+	}
+
+	#search-form {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.search-field-container {
+		width: 100%;
+	}
+
+	.search-button-container {
+		width: 25%;
+		margin-top: 1rem;
+	}
+
+	#tv-search-button {
+		width: 100%;
+	}
+
+	#tv-search-field {
+		/* changes the font-size of the placeholder */
+		font-size: 0.8rem;
+	}
+
+	/* styling the results area */
+	.results-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* width: fit-content; */
+	}
+
+	.results-header {
+		text-align: center;
+	}
+
+	.images-container {
+		margin: 0 auto;
+	}
+}
