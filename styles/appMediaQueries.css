@@ -43,6 +43,10 @@
 		margin-bottom: 0;
 	}
 
+	#logo {
+		width: 300px;
+	}
+
 	/* styling for the "Welcome" content and the "How to Use" content */
 	.main-content {
 		display: flex;
@@ -72,21 +76,24 @@
 	}
 
 	.search-field-container {
-		width: 100%;
+		width: 80%;
 	}
 
 	.search-button-container {
 		width: 25%;
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 	}
 
 	#tv-search-button {
-		width: 100%;
+		/* width: 100%; */
+		height: 25px;
+		line-height: 12.5px;
+		text-align: center;
 	}
 
 	#tv-search-field {
 		/* changes the font-size of the placeholder */
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 	}
 
 	/* styling the results area */

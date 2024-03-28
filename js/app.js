@@ -9,6 +9,7 @@ const searchButton = document.querySelector("#tv-search-button");
 const resultsContainer = document.querySelector(".results-container");
 console.log(resultsContainer.childNodes);
 
+// event listener for the "show more" button on a card to flip the card from front-to-back and back-to-front
 document.addEventListener("click", function (event) {
 	// get the element clicked to see if it's a button or link to external site
 	const clickedElement = event.target;
