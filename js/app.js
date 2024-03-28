@@ -82,7 +82,7 @@ searchButton.addEventListener("click", async (e) => {
 	// Scroll to the area of the page where results are shown after a short delay
 	// this fixes the issue of not correctly scrolling into view right away
 	setTimeout(() => {
-		resultsContainer.scrollIntoView({ behavior: "smooth" });
+		resultsContainer.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
 	}, 100);
 
 	// if search yields no results, let the user know
