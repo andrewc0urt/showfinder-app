@@ -43,9 +43,9 @@
 		margin-bottom: 0;
 	}
 
-	#logo {
-		/* width: 300px; */
-	}
+	/* #logo {
+		width: 300px;
+	} */
 
 	/* styling for the "Welcome" content and the "How to Use" content */
 	.main-content {
@@ -114,5 +114,11 @@
 
 	.front-card {
 		width: fit-content;
+	}
+}
+
+@media (max-width: 470.98px) {
+	#logo {
+		width: 350px;
 	}
 }
