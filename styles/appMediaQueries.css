@@ -102,6 +102,7 @@
 		flex-direction: column;
 		align-items: center;
 		width: fit-content;
+		margin: 0 auto;
 	}
 
 	.results-header {
@@ -115,10 +116,23 @@
 	.front-card {
 		width: fit-content;
 	}
+
+	.back-card {
+		width: 250px;
+	}
 }
 
 @media (max-width: 470.98px) {
 	#logo {
 		width: 350px;
+	}
+
+	.card-container {
+		display: block;
+		width: 14rem;
+	}
+
+	.back-card {
+		width: 211px;
 	}
 }
