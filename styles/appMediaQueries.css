@@ -140,4 +140,12 @@
 	.back-card {
 		width: 211px;
 	}
+
+	.results-container {
+		margin-left: 5%;
+	}
+
+	.results-header {
+		margin-right: 5%;
+	}
 }
