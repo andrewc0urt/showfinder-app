@@ -17,7 +17,7 @@ body {
 
 .card {
 	width: 19rem;
-	border-radius: 8px;
+	/* border-radius: 8px; */
 }
 
 /* .custom-card {
@@ -31,6 +31,10 @@ body {
 
 .hidden {
 	display: none;
+}
+
+.back-card {
+	border: 1px solid black;
 }
 
 .back-card span {
