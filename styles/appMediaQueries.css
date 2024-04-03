@@ -35,6 +35,11 @@
 	.results-header {
 		text-align: center;
 	}
+
+	.images-container {
+		/* override the bootstrap justify-content:center class */
+		justify-content: space-evenly !important;
+	}
 }
 
 @media (max-width: 767.98px) {

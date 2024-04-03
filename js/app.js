@@ -109,7 +109,7 @@ const createNewCard = () => {
 // function to create the content for the front card which will store the image and a 'Show More' button
 const makeFrontCard = () => {
 	const frontCard = document.createElement("div");
-	frontCard.classList.add("card", "mb-3", "me-md-4", "me-0", "front-card");
+	frontCard.classList.add("card", "mb-3", "me-lg-4", "me-0", "front-card");
 
 	const newImg = document.createElement("img");
 	newImg.classList.add("card-img-top");
@@ -138,7 +138,7 @@ const makeFrontCard = () => {
 const makeBackCard = () => {
 	// create a div container for the back of the card
 	const backCard = document.createElement("div");
-	backCard.classList.add("card", "mb-3", "me-md-4", "me-0", "back-card");
+	backCard.classList.add("card", "mb-3", "me-lg-4", "me-0", "back-card");
 	// backCard.style.height = "302px";
 	// backCard.style.height = "449.281px";
 
