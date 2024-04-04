@@ -1,6 +1,6 @@
 # ShowFinder: A TV Show Search Web Application
 
-🚀 **Live Website** _(temporary placeholder for demo purposes)_**:** [View it here](#)
+🚀 **Live Website** _(temporary placeholder for demo purposes)_**:** [View it here](https://showfinder-app.netlify.app/)
 
 Welcome to ShowFinder, your go-to destination for exploring and discovering your favorite TV shows! With ShowFinder, dive into a world of entertainment and easily find information about your desired shows.
 
